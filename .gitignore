@@ -8,3 +8,6 @@ build
 .project
 .settings
 lib/build
+gradlew.bat
+lib/.classpath
+lib/bin
