@@ -12,9 +12,6 @@ jobs:
       - checkout # check out the code in the project directory
 #      - run: echo "hello world" # run the `echo` command
       - run: ./gradlew stage
-      - run: echo "my artifact file" > /tmp/art-1
-#      - store_artifacts:
-#         path: /tmp/art-1
       - store_artifacts:
          path: ./lib/build/libs/all-in-one-jar.jar
 
