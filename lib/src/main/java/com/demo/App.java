@@ -14,7 +14,7 @@ public class App {
     	}
     	
         Undertow server = Undertow.builder()
-                .addHttpListener(port, "localhost")
+                .addHttpListener(port, "0.0.0.0")
                 .setHandler(new HttpHandler() {
                     @Override
                     public void handleRequest(final HttpServerExchange exchange) throws Exception {
