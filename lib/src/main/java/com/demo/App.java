@@ -7,8 +7,14 @@ import io.undertow.util.Headers;
 
 public class App {
     public static void main(final String[] args) {
+    	int port = 8080;
+    	String value = System.getenv("PORT");
+    	if (value != null && value.length() > 0) {
+    		port = Integer.parseInt(value);
+    	}
+    	
         Undertow server = Undertow.builder()
-                .addHttpListener(8080, "localhost")
+                .addHttpListener(port, "localhost")
                 .setHandler(new HttpHandler() {
                     @Override
                     public void handleRequest(final HttpServerExchange exchange) throws Exception {
